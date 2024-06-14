@@ -48,7 +48,7 @@ func main() {
 
 			if upd := update.MyChatMember; upd != nil {
 				if upd.NewChatMember.User.IsBot && upd.NewChatMember.Status == "member" {
-					resMsg = tgbotapi.NewMessage(upd.Chat.ID, fmt.Sprintf(messageAfterJoinChat, upd.Chat.ID))
+					resMsg = tgbotapi.NewMessage(upd.Chat.ID, messageAfterJoinChat)
 					buttons := tgbotapi.NewInlineKeyboardMarkup(tgbotapi.NewInlineKeyboardRow(tgbotapi.NewInlineKeyboardButtonURL(addBDButton, fmt.Sprintf(newUserLink, upd.Chat.ID))))
 					resMsg.ReplyMarkup = buttons
 					addMember(upd.Chat.ID, upd.From.ID)

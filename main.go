@@ -17,7 +17,7 @@ var (
 )
 
 func main() {
-	bot, err := tgbotapi.NewBotAPI("7275504206:AAGQz5i4QFzyXr3MTaof7y_36HQAz3bWW28")
+	bot, err := tgbotapi.NewBotAPI("тут был захардкоженный аксес токен")
 	if err != nil {
 		log.Panic(err)
 	}
